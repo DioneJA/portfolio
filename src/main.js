@@ -7,6 +7,15 @@ import i18n from './i18n';
 import './assets/main.css';
 import store from './store';
 
+import mdiVue from 'mdi-vue/v2';
+import * as mdijs from '@mdi/js';
+import CountryFlag from 'vue-country-flag';
+
+Vue.use(mdiVue, {
+  icons: mdijs
+});
+Vue.component('country-flag', CountryFlag);
+
 new Vue({
   router,
   store,
