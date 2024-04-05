@@ -4,9 +4,11 @@
   --color-border-secondary: #d5d6d7;
   --color-text-primary: #f13131;
   --color-text-primary-light: #F26363;
+  --color-text-secondary: #5c50ac;
+  --color-text-secondary-light: #0041b9;
   --color-text-neutral-darkest: #231F20;
   --color-text-neutral-dark: #4e4b4c;
-  --color-background-primary: #f6f6f6;
+  --color-background-primary: #d7d5d5;
   --color-background-secondary: #595959;
   --color-background-secondary-transparent: #59595930;
   --color-background-tertiary: #c4fffe;

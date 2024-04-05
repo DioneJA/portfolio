@@ -2,10 +2,12 @@
   <div>
     <desktop-navbar
       v-if="!isMobile"
+      :is-scroll-at-start="isScrollAtStart"
     />
     <mobile-navbar
       v-else
       :is-menu-open="isMenuOpen"
+      :is-scroll-at-start="isScrollAtStart"
       @toggle-menu="$emit('toggle-menu')"
     />
   </div>
@@ -24,6 +26,10 @@ export default {
     isMenuOpen: {
       type: Boolean,
       default: false
+    },
+    isScrollAtStart: {
+      type: Boolean,
+      default: true
     },
   },
   computed: {

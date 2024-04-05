@@ -1,11 +1,16 @@
 <template>
   <div>
-    <div class="flex justify-between items-center navbar px-6 fixed top-0 left-0 right-0 z-50">
+    <div
+      class="flex justify-between items-center navbar px-6 fixed top-0 left-0 right-0 z-50"
+      :class="{'scroll-at-top': isScrollAtStart,
+            'scroll-at-midle': !isScrollAtStart
+          }"
+    >
       <div>
         <span
-            class="text-2xl font-semibold tracking-widest title"
+            class="text-2xl font-bold tracking-widest title"
           >
-          {{ $t('portfolio') }}
+          {{ $t('myName').toUpperCase() }}
         </span>
       </div>
   
@@ -32,6 +37,10 @@ export default {
       type: Boolean,
       default: false
     },
+    isScrollAtStart: {
+      type: Boolean,
+      default: true
+    },
   },
   data: function () {
     return {
@@ -42,11 +51,13 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  background-color: var(--color-background-primary);
-  min-height: 65px;
+  max-height: 70px;
 }
 
 .title {
+  font-weight: 500;
+  letter-spacing: 0.2vw;
+  text-shadow: .5px .55px .5px;
   color: var(--color-text-primary);
   cursor: pointer;
   &:hover {
@@ -59,5 +70,16 @@ export default {
   color: var(--color-text-neutral-dark);
   cursor: pointer;
   border: none;
+  padding: none;
+}
+
+.scroll-at-midle {
+  transition: .4s ease;
+  background-color: var(--color-background-primary);
+}
+
+.scroll-at-top {
+  transition: .4s ease;
+  background-color: transparent;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div
     class="z-30 w-screen h-screen menu py-20 flex flex-col justify-center items-center gap-8"
-    style="height: calc(100vh - 65px);"
+    style="height: calc(100vh - 70px);"
   >
     <navbar-button
       :label="$t('navbar.home')"
@@ -35,7 +35,7 @@ export default {
 .menu {
   background-color: var(--color-background-primary);
   position: fixed;
-  top: 65px;
+  top: 70px;
   left: 0;
 }
 </style>

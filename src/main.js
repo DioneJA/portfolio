@@ -14,6 +14,7 @@ import CountryFlag from 'vue-country-flag';
 Vue.use(mdiVue, {
   icons: mdijs
 });
+
 Vue.component('country-flag', CountryFlag);
 
 new Vue({

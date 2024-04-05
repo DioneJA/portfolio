@@ -2,12 +2,14 @@
   <div
     id="app"
     class="w-screen"
+    ref="scrollableElement"
     :class="isMenuOpen ? 'overflow-hidden' : ''"
   >
     <header>
       <navbar
         class="w-full"
         :is-menu-open="isMenuOpen"
+        :is-scroll-at-start="isScrollAtStart"
         @toggle-menu="isMenuOpen = !isMenuOpen"
       />
     </header>
@@ -17,13 +19,9 @@
     </Transition>
 
     <template v-if="!isMenuOpen">
-      <section  class="pt-20">
+      <section>
         <router-view />
       </section>
-  
-      <footer>
-        teste footer
-      </footer>
     </template>
 
     <language-selector/>
@@ -36,6 +34,7 @@
 
 <script>
 import { Locales } from './i18n/locales';
+import { MobileScreenWidth } from './utils/screen/screenUtils';
 
 export default {
   name: 'App',
@@ -43,15 +42,28 @@ export default {
     Navbar: () => import('./components/navbar/Navbar.vue'),
     MobileMenu: () => import('./components/navbar/MobileMenu.vue'),
     LanguageSelector: () => import('./components/language/LanguageSelector.vue'),
-    GoToTopBtn: () => import('./components/buttons/GoToTopBtn.vue')
+    GoToTopBtn: () => import('./components/buttons/GoToTopBtn.vue'),
   },
   data: function () {
     return {
       isMenuOpen: false,
+      isScrollAtTop: true,
     };
   },
   mounted: function () {
     this.loadComponent();
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy: function () {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  computed: {
+    isMobile() {
+      return window.innerWidth < MobileScreenWidth;
+    },
+    isScrollAtStart() {
+      return this.isScrollAtTop;
+    },
   },
   methods: {
     loadComponent: function () {
@@ -62,6 +74,9 @@ export default {
         this.$store.dispatch('setLanguage', Locales.ptBr);
       }
     },
+    handleScroll: function () {
+      this.isScrollAtTop = window.scrollY === 0;
+    }
   }
 };
 </script>
@@ -74,4 +89,5 @@ export default {
 .slide-enter, .slide-leave-to {
   transform: translateY(-100%);
 }
+
 </style>

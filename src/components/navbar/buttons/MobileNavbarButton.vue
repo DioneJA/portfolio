@@ -37,7 +37,12 @@ export default {
 
 .selected {
   transition: .2s easy-in;
-  border-bottom: 3px solid ;
+  border-bottom: 3px solid var(--color-text-primary);
   color: var(--color-text-primary);
+  &:hover {
+    transition: .3s ease-in;
+    color: var(--color-text-primary-light);
+  }
 }
+
 </style>

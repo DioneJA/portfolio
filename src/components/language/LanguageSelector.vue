@@ -1,5 +1,5 @@
 <template>
-  <div ref="languageSelector" style="position: absolute; bottom: 25px; left: 25px;" class="z-40">
+  <div ref="languageSelector" style="position: fixed; bottom: 25px; left: 25px;" class="z-40">
     <div
       class="flex flex-col gap-1"
     >
@@ -82,6 +82,7 @@ export default {
   cursor: pointer;
   color: var(--color-text-neutral-dark);
   font-weight: medium;
+  background-color: white;
 }
 
 .menu-open {
