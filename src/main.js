@@ -11,6 +11,10 @@ import mdiVue from 'mdi-vue/v2';
 import * as mdijs from '@mdi/js';
 import CountryFlag from 'vue-country-flag';
 
+import { EventBus } from './eventBus';
+
+Vue.prototype.$bus = EventBus;
+
 Vue.use(mdiVue, {
   icons: mdijs
 });

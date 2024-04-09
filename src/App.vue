@@ -10,31 +10,41 @@
         class="w-full"
         :is-menu-open="isMenuOpen"
         :is-scroll-at-start="isScrollAtStart"
+        :current-view="currentView"
         @toggle-menu="isMenuOpen = !isMenuOpen"
+        @change-view="changeView"
       />
     </header>
 
     <Transition name="slide">
-      <mobile-menu v-if="isMenuOpen"/>
+      <mobile-menu
+        v-if="isMenuOpen"
+        :current-view="currentView"
+        @change-view="changeView"
+      />
     </Transition>
 
-    <template v-if="!isMenuOpen">
+    <div>
       <section>
         <router-view />
       </section>
-    </template>
+    </div>
 
     <language-selector/>
-    <go-to-top-btn
-      v-if="!isMenuOpen"
-      @go-to-top="isMenuOpen = false"
-    />
+
+    <Transition name="fade">
+      <go-to-top-btn
+        v-if="!isMenuOpen && !isScrollAtStart"
+        @go-to-top="scrollToTop"
+      />
+    </Transition> 
   </div>
 </template>
 
 <script>
 import { Locales } from './i18n/locales';
 import { MobileScreenWidth } from './utils/screen/screenUtils';
+import { ViewsType } from './utils/view/viewUtils';
 
 export default {
   name: 'App',
@@ -48,14 +58,19 @@ export default {
     return {
       isMenuOpen: false,
       isScrollAtTop: true,
+      currentView: ViewsType.Home,
     };
   },
   mounted: function () {
+    this.$bus.$on('active-section', (section) => {
+      this.currentView = section;
+    });
     this.loadComponent();
     window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy: function () {
     window.removeEventListener('scroll', this.handleScroll);
+    this.$bus.$off('active-section');
   },
   computed: {
     isMobile() {
@@ -69,6 +84,10 @@ export default {
     loadComponent: function () {
       this.setDefaultLanguage();
     },
+    changeView: function (view) {
+      this.isMenuOpen = false;
+      this.$bus.$emit('change-view', view);
+    },
     setDefaultLanguage: function () {
       if (!this.$store.getters.getLanguage) {
         this.$store.dispatch('setLanguage', Locales.ptBr);
@@ -76,12 +95,20 @@ export default {
     },
     handleScroll: function () {
       this.isScrollAtTop = window.scrollY === 0;
-    }
-  }
+    },
+    scrollToTop: function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+      this.isMenuOpen = false;
+      this.currentView = ViewsType.Home;
+    },
+  },
 };
 </script>
 
-<style scoped>
+<style>
 .slide-enter-active, .slide-leave-active {
   transition: transform 0.5s;
 }
@@ -89,5 +116,11 @@ export default {
 .slide-enter, .slide-leave-to {
   transform: translateY(-100%);
 }
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease;
+}
 
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
 </style>

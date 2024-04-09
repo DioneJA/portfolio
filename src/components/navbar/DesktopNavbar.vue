@@ -1,39 +1,55 @@
 <template>
   <div
     class="flex items-center justify-between navbar roboto fixed top-0 left-0 right-0 z-50"
-    :class="{'px-2': isMediumScreen, 
+    :class="{'px-3': isMediumScreen, 
             'px-20': !isMediumScreen,
             'scroll-at-top': isScrollAtStart,
             'scroll-at-midle': !isScrollAtStart
           }"
   >
-    <div class="flex items-center justify-between">
-      <span
-        class="text-2xl font-bold tracking-widest title"
-      >
-        {{ $t('myName').toUpperCase() }}
-      </span>
+    <div class="flex items-center justify-between" style="height: 50px;">
+      <img
+        :src="isMediumScreen ? 'src/assets/small-image-logo.png' : 'src/assets/image-logo.png'"
+        alt="logo"
+        style="max-width: 100%; max-height: 100%; object-fit: contain;"
+        class="cursor-pointer img-logo"
+        @click="changeView(ViewsType.Home)"
+      />
     </div>
     <div>
       <navbar-button
         :label="$t('navbar.home')"
-        is-selected
+        :scroll-at-start="isScrollAtStart"
+        :is-selected="currentView === ViewsType.Home"
+        @click="changeView(ViewsType.Home)"
       />
 
       <navbar-button
         :label="$t('navbar.aboutMe')"
+        :scroll-at-start="isScrollAtStart"
+        :is-selected="currentView === ViewsType.AboutMe"
+        @click="changeView(ViewsType.AboutMe)"
       />
 
       <navbar-button
         :label="$t('navbar.experiences')"
+        :scroll-at-start="isScrollAtStart"
+        :is-selected="currentView === ViewsType.Experiences"
+        @click="changeView(ViewsType.Experiences)"
       />
 
       <navbar-button
         :label="$t('navbar.projects')"
+        :scroll-at-start="isScrollAtStart"
+        :is-selected="currentView === ViewsType.Projects"
+        @click="changeView(ViewsType.Projects)"
       />
 
       <navbar-button
         :label="$t('navbar.skills')"
+        :scroll-at-start="isScrollAtStart"
+        :is-selected="currentView === ViewsType.Skills"
+        @click="changeView(ViewsType.Skills)"
       />
     </div>
   </div>
@@ -41,6 +57,7 @@
 
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
+import { ViewsType } from '../../utils/view/viewUtils';
 
 export default {
   name: 'DesktopNavBar',
@@ -52,11 +69,25 @@ export default {
       type: Boolean,
       default: true
     },
+    currentView: {
+      type: String,
+    },
+  },
+  data: function () {
+    return {
+      ViewsType: ViewsType,
+    };
   },
   computed: {
     isMediumScreen() {
       return window.innerWidth < TabletScreenWidth;
-    }
+    },
+  },
+  methods: {
+    changeView: function (view) {
+      console.log('netoufasf', view);
+      this.$emit('change-view', view);
+    },
   }
 };
 </script>
@@ -67,14 +98,14 @@ export default {
 }
 
 .title {
-  color: var(--color-text-primary);
+  color: var(--color-text-neutral-light);
   font-weight: 500;
   letter-spacing: 0.2vw;
   text-shadow: .5px .55px .5px;
   cursor: pointer;
   &:hover {
     transition: .2s ease-in;
-    color: var(--color-text-primary-light);
+    color: var(--color-text-neutral-light-light);
   }
 }
 .scroll-at-midle {
@@ -85,5 +116,13 @@ export default {
 .scroll-at-top {
   transition: .4s ease;
   background-color: transparent;
+}
+
+.img-logo {
+  opacity: 1;
+  transition: .4s ease;
+  &:hover {
+    opacity: .7;
+  }
 }
 </style>

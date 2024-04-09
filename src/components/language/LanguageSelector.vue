@@ -80,7 +80,7 @@ export default {
 <style lang="scss" scoped>
 .select-language {
   cursor: pointer;
-  color: var(--color-text-neutral-dark);
+  color: var(--color-text-neutral-darkest);
   font-weight: medium;
   background-color: white;
 }
@@ -100,24 +100,19 @@ export default {
 .languages {
   border: 1px solid var(--color-border-primary);
   cursor: pointer;
-  color: var(--color-text-neutral-dark);
+  color: var(--color-text-neutral-darkest);
   font-weight: medium;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  background-color: #FFFFFF;
 }
 
 .selected {
   background-color: var(--color-background-tertiary-transparent);
+  border-radius: 8px;
 }
 
 .language:hover {
   background-color: var(--color-background-secondary-transparent);
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter, .fade-leave-to {
-  opacity: 0;
 }
 </style>

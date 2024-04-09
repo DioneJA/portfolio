@@ -16,6 +16,14 @@ const messages = {
     experiences: 'Experiences',
   },
   copyright: 'Copyright &#169; 2024 by Bruno Alves. All rights reserved.',
+  aboutMe: {
+    title: 'About Me',
+    description: 'Passionate about science and technology',
+    graduation: 'Graduated in Computer Science at IFSULDEMINAS, 2023',
+    yearsOfExperience: '{x} year of experience',
+    englishLevel: 'Intermediate English',
+    actuallyStuding: 'Currently Studying Java and Vue.js',
+  },
 };
 
 export default messages;
