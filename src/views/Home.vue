@@ -1,12 +1,20 @@
 <template>
   <div class="flex flex-col">
     <home-section
+      :id="ViewsType.Home"
       :ref="ViewsType.Home"
       :is-mobile="isMobile"
       class="w-full first-section"
     />
     <about-section
+      :id="ViewsType.AboutMe"
       :ref="ViewsType.AboutMe"
+      :is-mobile="isMobile"
+      class="w-full section"
+    />
+    <experiences-section
+      :id="ViewsType.Experiences"
+      :ref="ViewsType.Experiences"
       :is-mobile="isMobile"
       class="w-full section"
     />
@@ -24,6 +32,7 @@ export default {
   components: {
     HomeSection: () => import('../components/home/HomeSection.vue'),
     AboutSection: () => import('../components/about/AboutSection.vue'),
+    ExperiencesSection: () => import('../components/experiences/ExperiencesSection.vue'),
   },
   data: function () {
     return {
@@ -51,27 +60,11 @@ export default {
       }
       this.$store.dispatch('setLanguage', Locales.ptBr);
     },
-    handleScroll: function () {
-      const sections = [this.ViewsType.Home, this.ViewsType.AboutMe];
-      let activeSection = null;
-      for (let sectionId of sections) {
-        const section = this.$refs[sectionId];
-        const rect = section.$el.getBoundingClientRect();
-        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-          activeSection = sectionId;
-          break;
-        }
-      }
-      if (activeSection) {
-        this.$bus.$emit('active-section', activeSection);
-      }
-    },
     changeView: function (view) {
       const section = this.$refs[view];
       if (section) {
         section.$el.scrollIntoView({ behavior: 'smooth' });
       }
-      this.$bus.$emit('active-section', view);
     }
   }
 };
@@ -83,5 +76,11 @@ export default {
 }
 .first-section {
   height: 100vh;
+}
+.title {
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-primary);
 }
 </style>

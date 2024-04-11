@@ -2,7 +2,6 @@
   <div>
     <desktop-navbar
       v-if="!isMobile"
-      :current-view="currentView"
       :is-scroll-at-start="isScrollAtStart"
       @change-view="event => $emit('change-view', event)"
     />
@@ -10,7 +9,6 @@
       v-else
       :is-menu-open="isMenuOpen"
       :is-scroll-at-start="isScrollAtStart"
-      :current-view="currentView"
       @toggle-menu="$emit('toggle-menu')"
       @change-view="event => $emit('change-view', event)"
     />
@@ -35,9 +33,6 @@ export default {
       type: Boolean,
       default: true
     },
-    currentView: {
-      type: String,
-    }
   },
   computed: {
     isMobile() {

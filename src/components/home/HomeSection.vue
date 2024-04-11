@@ -80,12 +80,12 @@ export default {
   font-weight: 500;
   cursor: pointer;
   border-radius: 20px;
-  color: var(--color-text-neutral-darkest);
-  border: 2px solid var(--color-text-neutral-darkest);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   &:hover {
     transition: 0.2s ease;
-    border: 2px solid var(--color-primary);
-    color: var(--color-primary);
+    border: 2px solid var(--color-primary-light);
+    color: var(--color-primary-light);
   }
 }
 </style>

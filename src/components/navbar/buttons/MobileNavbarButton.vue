@@ -1,7 +1,6 @@
 <template>
   <button
     class="navbar-button text-lg font-medium tracking-wide"
-    :class="isSelected ? 'selected' : ''"
     @click="$emit('click')"
     >
     {{ label }}
@@ -16,10 +15,6 @@ export default {
       type: String,
       required: true,
     },
-    isSelected: {
-      type: Boolean,
-      default: false,
-    },
   },
 };
 </script>
@@ -33,16 +28,6 @@ export default {
   &:hover {
     transition: 0.3s ease-in;
     color: var(--color-primary);
-  }
-}
-
-.selected {
-  transition: 0.2s easy-in;
-  border-bottom: 3px solid var(--color-primary);
-  color: var(--color-primary);
-  &:hover {
-    transition: 0.3s ease-in;
-    color: var(--color-primary-light);
   }
 }
 </style>

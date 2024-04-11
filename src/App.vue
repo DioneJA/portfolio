@@ -10,7 +10,6 @@
         class="w-full"
         :is-menu-open="isMenuOpen"
         :is-scroll-at-start="isScrollAtStart"
-        :current-view="currentView"
         @toggle-menu="isMenuOpen = !isMenuOpen"
         @change-view="changeView"
       />
@@ -19,7 +18,6 @@
     <Transition name="slide">
       <mobile-menu
         v-if="isMenuOpen"
-        :current-view="currentView"
         @change-view="changeView"
       />
     </Transition>
@@ -27,6 +25,7 @@
     <div>
       <section>
         <router-view />
+        <footer-component/>
       </section>
     </div>
 
@@ -44,7 +43,6 @@
 <script>
 import { Locales } from './i18n/locales';
 import { MobileScreenWidth } from './utils/screen/screenUtils';
-import { ViewsType } from './utils/view/viewUtils';
 
 export default {
   name: 'App',
@@ -53,24 +51,20 @@ export default {
     MobileMenu: () => import('./components/navbar/MobileMenu.vue'),
     LanguageSelector: () => import('./components/language/LanguageSelector.vue'),
     GoToTopBtn: () => import('./components/buttons/GoToTopBtn.vue'),
+    FooterComponent: () => import('./components/footer/FooterComponent.vue'),
   },
   data: function () {
     return {
       isMenuOpen: false,
       isScrollAtTop: true,
-      currentView: ViewsType.Home,
     };
   },
   mounted: function () {
-    this.$bus.$on('active-section', (section) => {
-      this.currentView = section;
-    });
     this.loadComponent();
     window.addEventListener('scroll', this.handleScroll);
   },
   beforeDestroy: function () {
     window.removeEventListener('scroll', this.handleScroll);
-    this.$bus.$off('active-section');
   },
   computed: {
     isMobile() {
@@ -102,7 +96,6 @@ export default {
         behavior: 'smooth',
       });
       this.isMenuOpen = false;
-      this.currentView = ViewsType.Home;
     },
   },
 };

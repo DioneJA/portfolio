@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  max-height: 70px;
+  height: 70px;
 }
 
 .title {

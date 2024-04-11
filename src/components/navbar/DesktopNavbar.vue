@@ -20,35 +20,30 @@
       <navbar-button
         :label="$t('navbar.home')"
         :scroll-at-start="isScrollAtStart"
-        :is-selected="currentView === ViewsType.Home"
         @click="changeView(ViewsType.Home)"
       />
 
       <navbar-button
         :label="$t('navbar.aboutMe')"
         :scroll-at-start="isScrollAtStart"
-        :is-selected="currentView === ViewsType.AboutMe"
         @click="changeView(ViewsType.AboutMe)"
       />
 
       <navbar-button
         :label="$t('navbar.experiences')"
         :scroll-at-start="isScrollAtStart"
-        :is-selected="currentView === ViewsType.Experiences"
         @click="changeView(ViewsType.Experiences)"
       />
 
       <navbar-button
         :label="$t('navbar.projects')"
         :scroll-at-start="isScrollAtStart"
-        :is-selected="currentView === ViewsType.Projects"
         @click="changeView(ViewsType.Projects)"
       />
 
       <navbar-button
         :label="$t('navbar.skills')"
         :scroll-at-start="isScrollAtStart"
-        :is-selected="currentView === ViewsType.Skills"
         @click="changeView(ViewsType.Skills)"
       />
     </div>
@@ -68,9 +63,6 @@ export default {
     isScrollAtStart: {
       type: Boolean,
       default: true
-    },
-    currentView: {
-      type: String,
     },
   },
   data: function () {
@@ -94,7 +86,7 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
-  max-height: 70px;
+  height: 70px;
 }
 
 .title {

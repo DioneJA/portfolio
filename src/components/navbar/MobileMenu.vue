@@ -5,27 +5,22 @@
   >
     <navbar-button
       :label="$t('navbar.home')"
-      :is-selected="currentView === ViewsType.Home"
       @click="changeView(ViewsType.Home)"
     />
     <navbar-button
       :label="$t('navbar.aboutMe')"
-      :is-selected="currentView === ViewsType.AboutMe"
       @click="changeView(ViewsType.AboutMe)"
     />
     <navbar-button
       :label="$t('navbar.experiences')"
-      :is-selected="currentView === ViewsType.Experiences"
       @click="changeView(ViewsType.Experiences)"
     />
     <navbar-button
       :label="$t('navbar.projects')"
-      :is-selected="currentView === ViewsType.Projects"
       @click="changeView(ViewsType.Projects)"
     />
     <navbar-button
       :label="$t('navbar.skills')"
-      :is-selected="currentView === ViewsType.Skills"
       @click="changeView(ViewsType.Skills)"
     />
   </div>
@@ -38,11 +33,6 @@ export default {
   name: 'MobileMenu',
   components: {
     NavbarButton: () => import('./buttons/MobileNavbarButton.vue'),
-  },
-  props: {
-    currentView: {
-      type: String
-    },
   },
   data: function () {
     return {
