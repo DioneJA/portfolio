@@ -60,7 +60,7 @@
     </div>
     <div class="flex items-center justify-center profile-image-container basis-1/2">
       <img
-        src="src/assets/profile/full-image-profile.webp"
+        src="../../assets/profile/full-image-profile.webp"
         alt="image"
         style="object-fit: cover"
         :style="isMobile ? 'max-width: 95%; ' : 'max-width: 75%; '"
