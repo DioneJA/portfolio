@@ -1,35 +1,45 @@
-# portfolio
+# Meu Portfólio Pessoal
 
-This template should help get you started developing with Vue 3 in Vite.
+Este é o meu portfólio pessoal, desenvolvido com Vue.js 2 e outras tecnologias. Ele apresenta meus projetos, habilidades e informações sobre mim.
 
-## Recommended IDE Setup
+## Tecnologias Utilizadas
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Vue.js 2:** Framework JavaScript progressivo para construir interfaces de usuário.
+- **Tailwind CSS:** Um framework CSS utilitário de baixo nível para criar designs personalizados rapidamente.
+- **Vue Router:** Roteamento para aplicativos Vue.js, permitindo navegação entre componentes.
+- **Vuex:** Gerenciamento de estado para aplicativos Vue.js.
+- **i18n:** Suporte internacionalização para tradução de conteúdo.
 
-## Customize configuration
+## Características
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+- **Responsivo:** O portfólio é totalmente responsivo, garantindo uma experiência consistente em diferentes dispositivos.
+- **Localização:** Suporte para dois idiomas através do i18n (pt-BR, en-US, permitindo a tradução de conteúdo.
 
-## Project Setup
+## Como Executar
 
-```sh
+1. Clone este repositório:
+
+```bash
+[git clone https://github.com/seuusuario/seu-portfolio.git](https://github.com/DioneJA/portfolio)
+```
+
+2. Instale as dependências:
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+3. Execute o projeto:
+``` bash
+npm run serve
 ```
 
-### Compile and Minify for Production
+## Abra o navegador e vá para http://localhost:8080 para visualizar o portfólio.
 
-```sh
-npm run build
-```
+## Contribuindo
 
-### Lint with [ESLint](https://eslint.org/)
+Se você encontrar algum problema ou tiver sugestões de melhorias, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-```sh
-npm run lint
-```
+## Autor
+
+Feito com ❤️ por [Bruno Dionísio Alves](https://github.com/DioneJA).
+
