@@ -20,7 +20,7 @@ Este é o meu portfólio pessoal, desenvolvido com Vue.js 2 e outras tecnologias
 1. Clone este repositório:
 
 ```bash
-[git clone https://github.com/seuusuario/seu-portfolio.git](https://github.com/DioneJA/portfolio)
+[Porifólio](https://github.com/DioneJA/portfolio)
 ```
 
 2. Instale as dependências:
