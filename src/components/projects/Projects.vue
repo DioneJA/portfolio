@@ -32,6 +32,13 @@
 
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
+import portfolioImg from '../../assets/projects/portfolio-img.webp';
+import toDoListImg from '../../assets/projects/to-do-list.webp';
+import monsterKillerImg from '../../assets/projects/monster-killer.webp';
+import baseVueProjectImg from '../../assets/projects/base-project-vue.webp';
+import javaCompilerImg from '../../assets/projects/java-compiler.webp';
+import afndConversor from '../../assets/projects/afnd-conversor.webp';
+import netflixCloneImg from '../../assets/projects/netflix-clone.webp';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -58,43 +65,43 @@ export default {
         {
           title: this.$t('projects.portfolio.title'),
           description: this.$t('projects.portfolio.description'),
-          imagePath: 'src/assets/projects/portfolio-img.webp',
+          imagePath: portfolioImg,
           projectUrl: 'https://github.com/DioneJA/portfolio',
         },
         {
           title: this.$t('projects.toDoList.title'),
           description: this.$t('projects.toDoList.description'),
-          imagePath: 'src/assets/projects/to-do-list.webp',
+          imagePath: toDoListImg,
           projectUrl: 'https://github.com/DioneJA/toDo-list-vuejs',
         },
         {
           title: this.$t('projects.monsterKiller.title'),
           description: this.$t('projects.monsterKiller.description'),
-          imagePath: 'src/assets/projects/monster-killer.webp',
+          imagePath: monsterKillerImg,
           projectUrl: 'https://github.com/DioneJA/matador-de-monstros',
         },
         {
           title: this.$t('projects.baseVueProject.title'),
           description: this.$t('projects.baseVueProject.description'),
-          imagePath: 'src/assets/projects/base-project-vue.webp',
+          imagePath: baseVueProjectImg,
           projectUrl: 'https://github.com/DioneJA/base-vue-project',
         },
         {
           title: this.$t('projects.javaCompilator.title'),
           description: this.$t('projects.javaCompilator.description'),
-          imagePath: 'src/assets/projects/java-compiler.webp',
+          imagePath: javaCompilerImg,
           projectUrl: 'https://github.com/PedroH-CElias/Compilador',
         },
         {
           title: this.$t('projects.netflixClone.title'),
           description: this.$t('projects.netflixClone.description'),
-          imagePath: 'src/assets/projects/netflix-clone.webp',
+          imagePath: netflixCloneImg,
           projectUrl: 'https://github.com/DioneJA/clone_front_netflix',
         },
         {
           title: this.$t('projects.afndConversor.title'),
           description: this.$t('projects.afndConversor.description'),
-          imagePath: 'src/assets/projects/afnd-conversor.webp',
+          imagePath: afndConversor,
           projectUrl: 'https://github.com/DioneJA/Conversor-de-AFND-para-AFD',
         },
       ];

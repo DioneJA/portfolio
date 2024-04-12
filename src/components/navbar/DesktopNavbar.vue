@@ -9,7 +9,7 @@
   >
     <div class="flex items-center justify-between" style="height: 50px;">
       <img
-        :src="isMediumScreen ? 'src/assets/logos/small-image-logo.png' : 'src/assets/logos/image-logo.png'"
+        :src="isMediumScreen ? smallLogo : normalLogo"
         alt="logo"
         style="max-width: 100%; max-height: 100%; object-fit: contain;"
         class="cursor-pointer img-logo"
@@ -53,6 +53,8 @@
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
 import { ViewsType } from '../../utils/view/viewUtils';
+import smallLogo from '../../assets/logos/small-image-logo.png';
+import normalLogo from '../../assets/logos/image-logo.png';
 
 export default {
   name: 'DesktopNavBar',
@@ -68,6 +70,8 @@ export default {
   data: function () {
     return {
       ViewsType: ViewsType,
+      smallLogo: smallLogo,
+      normalLogo: normalLogo
     };
   },
   computed: {

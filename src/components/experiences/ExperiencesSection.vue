@@ -32,6 +32,9 @@
 
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
+import exatiLogo from '../../assets/logos/exati-logo.webp';
+import ifsulLogo from '../../assets/logos/ifsul-logo.webp';
+import prefeituraPassosLogo from '../../assets/logos/prefeitura-passos-logo.webp';
 
 export default {
   components: {
@@ -60,7 +63,7 @@ export default {
             position: this.$t('workExperiences.exatiAnalytics.position'),
             description: this.$t('workExperiences.exatiAnalytics.description'),
             tecnologies: this.$t('workExperiences.exatiAnalytics.tecnologies'),
-            logoSrc: '../../assets/logos/exati-logo.webp'
+            logoSrc: exatiLogo
           },
           {
             company: this.$t('workExperiences.exatiIntern.company'),
@@ -68,7 +71,7 @@ export default {
             position: this.$t('workExperiences.exatiIntern.position'),
             description: this.$t('workExperiences.exatiIntern.description'),
             tecnologies: this.$t('workExperiences.exatiIntern.tecnologies'),
-            logoSrc: 'src/assets/logos/exati-logo.webp'
+            logoSrc: exatiLogo
           },
           {
             company: this.$t('workExperiences.incetec.company'),
@@ -76,14 +79,14 @@ export default {
             position: this.$t('workExperiences.incetec.position'),
             description: this.$t('workExperiences.incetec.description'),
             tecnologies: this.$t('workExperiences.incetec.tecnologies'),
-            logoSrc: 'src/assets/logos/ifsul-logo.webp'
+            logoSrc: ifsulLogo
           },
           {
             company: this.$t('workExperiences.citHallPassos.company'),
             period: this.$t('workExperiences.citHallPassos.period'),
             position: this.$t('workExperiences.citHallPassos.position'),
             description: this.$t('workExperiences.citHallPassos.description'),
-            logoSrc: 'src/assets/logos/prefeitura-passos-logo.webp'
+            logoSrc: prefeituraPassosLogo
           },
         ];
     },
