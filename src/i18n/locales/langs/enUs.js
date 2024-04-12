@@ -27,6 +27,45 @@ const messages = {
   experiences: {
     title: "Experiences",
   },
+  skills: {
+    title: 'Skills',
+  },
+  projects: {
+    title: 'Projects',
+    baseVueProject: {
+      title: 'Base Vue Project',
+      description: 'Base project for learning Vue.js, Vuex, i18n, router, etc...',
+    },
+    javaCompilator: {
+      title: 'Lexical Analyzer',
+      description: 'Project for learning compilers, using JCUP and JFLEX.',
+    },
+    toDoList: {
+      title: 'To-Do List',
+      description: 'Project using VueJs to create a To-Do List.',
+    },
+    monsterKiller: {
+      title: 'Monster Killer',
+      description: 'Simples game developed for learning JavaScript, HTML, CSS and Vue.js.',
+    },
+    netflixClone: {
+      title: 'Netflix Clone',
+      description: 'Project for learning JavaScript, HTML and CSS.',
+    },
+    afndConversor: {
+      title: 'AFND to AFD Converter',
+      description: 'Project for converting AFND to AFD in Java.',
+    },
+    portfolio: {
+      title: 'My Portfolio',
+      description: 'Project for learning JavaScript, HTML, CSS, VUE.JS, Tailwind CSS and VITE',
+    },
+  },
+  notFoundPage: {
+    title: 'Page Not Found',
+    description: 'The page you are looking for does not exist.',
+    button: 'Back to Home',
+  },
   workExperiences: {
     tecnologies: 'Tecnologies',
     exatiIntern: {

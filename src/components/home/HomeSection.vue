@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .background-image {
-  background-image: url("src/assets/image-background.webp");
+  background-image: url("src/assets/background/image-background.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.25;
@@ -54,7 +54,7 @@ export default {
 .profile-image {
   width: 250px;
   height: 250px;
-  background-image: url("src/assets/image-profile.webp");
+  background-image: url("src/assets/profile/image-profile.webp");
   background-size: cover;
   background-position: center;
   border-radius: 50%;

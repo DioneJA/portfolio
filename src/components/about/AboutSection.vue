@@ -9,7 +9,10 @@
     >
       <div class="flex flex-col items-start justify-start gap-10">
         <h1 class="title">{{$t('aboutMe.title').toUpperCase()}}</h1>
-        <h2 class="description">{{`${$t('aboutMe.description')}.`}}</h2>
+        <div class="description">
+          <country-flag country='br' shadow/>
+          <span class="ml-4">{{`${$t('aboutMe.description')}`}}</span>
+        </div>
         <ul class="about-list pl-8 flex flex-col gap-4">
           <li>{{$t('aboutMe.graduation')}}</li>
           <li>{{$t('aboutMe.yearsOfExperience', {x: 1})}}</li>
@@ -53,12 +56,11 @@
           >
           </mdicon>
         </button>
-        <!-- <mdicon class="social-media" name="twitter" size="35"></mdicon> -->
       </div>
     </div>
     <div class="flex items-center justify-center profile-image-container basis-1/2">
       <img
-        src="src/assets/full-image-profile.webp"
+        src="src/assets/profile/full-image-profile.webp"
         alt="image"
         style="object-fit: cover"
         :style="isMobile ? 'max-width: 95%; ' : 'max-width: 75%; '"
@@ -85,7 +87,6 @@ export default {
       this.goToUrl(import.meta.env.VITE_GITHUB_URL);
     },
     openFacebookUrl: function () {
-      console.log('entrou');
       this.goToUrl(import.meta.env.VITE_FACEBOOK_URL);
     },
     openInstagramUrl: function () {

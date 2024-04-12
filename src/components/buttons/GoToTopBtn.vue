@@ -15,7 +15,8 @@ export default {
 
 <style lang="scss" scoped>
 .go-to-top-btn {
-  background-color: var(--color-primary);
+  transition: .3s ease-in;
+  background-color: var(--color-primary-light);
   border: none;
   cursor: pointer;
   padding: 5px;
@@ -25,10 +26,10 @@ export default {
   right: 20px;
   z-index: 100;
   border-radius: 50%;
-  color: white;
+  color: var(--color-text-neutral-dark);
   &:hover {
     transition: .3s ease-in;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary-ultralight);
   }
 }
 </style>

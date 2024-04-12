@@ -1,7 +1,8 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
   --color-primary: #E0234E;
-  --color-primary-light: hwb(0 51% 0%);
+  --color-primary-light: rgb(255, 122, 122);
+  --color-primary-ultralight: rgb(255, 168, 168);
   --color-text-secondary: #5c50ac;
   --color-text-secondary-light: #0041b9;
   --color-text-neutral-darkest: #231F20;
@@ -14,6 +15,7 @@
   --color-background-secondary-transparent: #59595930;
   --color-background-tertiary: #f0f0f0;
   --color-background-tertiary-light: #f9f9f9;
+  --color-background-tertiary-light-transparent:rgba(249, 249, 249, 0.755);
   --color-background-tertiary-dark: #d0d0d0;
 }
 

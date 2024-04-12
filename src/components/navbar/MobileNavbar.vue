@@ -8,7 +8,7 @@
       }">
       <div class="flex items-center justify-between" style="height: 45px">
         <img
-          src="src/assets/image-logo.png"
+          src="src/assets/logos/image-logo.png"
           alt="logo"
           style="max-width: 100%; max-height: 100%; object-fit: contain"
           class="cursor-pointer"

@@ -9,7 +9,7 @@
   >
     <div class="flex items-center justify-between" style="height: 50px;">
       <img
-        :src="isMediumScreen ? 'src/assets/small-image-logo.png' : 'src/assets/image-logo.png'"
+        :src="isMediumScreen ? 'src/assets/logos/small-image-logo.png' : 'src/assets/logos/image-logo.png'"
         alt="logo"
         style="max-width: 100%; max-height: 100%; object-fit: contain;"
         class="cursor-pointer img-logo"
@@ -77,7 +77,6 @@ export default {
   },
   methods: {
     changeView: function (view) {
-      console.log('netoufasf', view);
       this.$emit('change-view', view);
     },
   }

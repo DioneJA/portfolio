@@ -67,7 +67,7 @@ export default {
     window.removeEventListener('scroll', this.handleScroll);
   },
   computed: {
-    isMobile() {
+    isMobile: function () {
       return window.innerWidth < MobileScreenWidth;
     },
     isScrollAtStart() {
@@ -78,7 +78,15 @@ export default {
     loadComponent: function () {
       this.setDefaultLanguage();
     },
-    changeView: function (view) {
+    changeView: async function (view) {
+      if (this.$route?.name !== 'home') {
+        await this.$router.push({ name: 'home' });
+        setTimeout(() => {
+          this.isMenuOpen = false;
+          this.$bus.$emit('change-view', view);
+        }, 50);
+        return;
+      }
       this.isMenuOpen = false;
       this.$bus.$emit('change-view', view);
     },

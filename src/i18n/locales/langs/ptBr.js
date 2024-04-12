@@ -26,6 +26,49 @@ const messages = {
   experiences: {
     title: "Experiências",
   },
+  skills: {
+    title: 'Habilidades',
+  },
+  projects: {
+    title: 'Projetos',
+    pingPong: {
+      title: 'Ping-Pong',
+      description: 'Um simples projeto realizado com a bilioteca P5 com um jogo de ping-pong'
+    },
+    baseVueProject: {
+      title: 'Projeto Base de Vue.js',
+      description: 'Projeto base para o aprendizado de Vue.js utilizando Vite, Vuex, i18n, router, etc...',
+    },
+    javaCompilator: {
+      title: 'Analisador léxico em Java',
+      description: 'Projeto para o aprendizado de compiladores lexicos em Java, utilizando JCUP e JFLEX.',
+    },
+    toDoList: {
+      title: 'To-Do List',
+      description: 'Projeto utilizando VueJs para criar uma lista de tarefas.',
+    },
+    monsterKiller: {
+      title: 'Jogo de Monstros',
+      description: 'Jogo simples no navegador desenvolvido para o aprendizado de JavaScript, HTML, CSS e Vue.js.',
+    },
+    netflixClone: {
+      title: 'Clone do Netflix',
+      description: 'Projeto para o aprendizado de JavaScript, HTML e CSS.',
+    },
+    afndConversor: {
+      title: 'Conversor de AFND para AFD',
+      description: 'Projeto para converter Autômatos Finitos Não Determinísticos em Autômatos Finitos Determinísticos em Java.',
+    },
+    portfolio: {
+      title: 'Meu Portifolio',
+      description: 'Projeto para o aprendizado de JavaScript, HTML, CSS, Vue.js, Tailwind CSS e Vite.',
+    }
+  },
+  notFoundPage: {
+    title: 'Página não encontrada',
+    description: 'A página que você esta procurando não existe!',
+    button: 'Voltar para o início',
+  },
   tecnologies: 'Tecnologias',
   workExperiences: {
     exatiAnalytics: {

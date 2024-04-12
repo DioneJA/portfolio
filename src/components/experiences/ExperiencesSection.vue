@@ -60,7 +60,7 @@ export default {
             position: this.$t('workExperiences.exatiAnalytics.position'),
             description: this.$t('workExperiences.exatiAnalytics.description'),
             tecnologies: this.$t('workExperiences.exatiAnalytics.tecnologies'),
-            logoSrc: '/src//assets/exati-logo.webp'
+            logoSrc: '/src/assets/logos/exati-logo.webp'
           },
           {
             company: this.$t('workExperiences.exatiIntern.company'),
@@ -68,7 +68,7 @@ export default {
             position: this.$t('workExperiences.exatiIntern.position'),
             description: this.$t('workExperiences.exatiIntern.description'),
             tecnologies: this.$t('workExperiences.exatiIntern.tecnologies'),
-            logoSrc: '/src/assets/exati-logo.webp'
+            logoSrc: '/src/assets/logos/exati-logo.webp'
           },
           {
             company: this.$t('workExperiences.incetec.company'),
@@ -76,14 +76,14 @@ export default {
             position: this.$t('workExperiences.incetec.position'),
             description: this.$t('workExperiences.incetec.description'),
             tecnologies: this.$t('workExperiences.incetec.tecnologies'),
-            logoSrc: '/src/assets/ifsul-logo.webp'
+            logoSrc: '/src/assets/logos/ifsul-logo.webp'
           },
           {
             company: this.$t('workExperiences.citHallPassos.company'),
             period: this.$t('workExperiences.citHallPassos.period'),
             position: this.$t('workExperiences.citHallPassos.position'),
             description: this.$t('workExperiences.citHallPassos.description'),
-            logoSrc: '/src/assets/prefeitura-passos-logo.webp'
+            logoSrc: '/src/assets/logos/prefeitura-passos-logo.webp'
           },
         ];
     },

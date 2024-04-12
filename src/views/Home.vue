@@ -18,6 +18,18 @@
       :is-mobile="isMobile"
       class="w-full section"
     />
+    <projects
+      :id="ViewsType.Projects"
+      :ref="ViewsType.Projects"
+      :is-mobile="isMobile"
+      class="w-full section"
+    />
+    <skills
+      :id="ViewsType.Skills"
+      :ref="ViewsType.Skills"
+      :is-mobile="isMobile"
+      class="w-full section"
+    />
   </div>
 </template>
 
@@ -33,6 +45,8 @@ export default {
     HomeSection: () => import('../components/home/HomeSection.vue'),
     AboutSection: () => import('../components/about/AboutSection.vue'),
     ExperiencesSection: () => import('../components/experiences/ExperiencesSection.vue'),
+    Skills: () => import('../components/skills/Skills.vue'),
+    Projects: () => import('../components/projects/Projects.vue'),
   },
   data: function () {
     return {
@@ -82,5 +96,11 @@ export default {
   font-size: 2rem;
   color: var(--color-primary);
   border-bottom: 1px solid var(--color-primary);
+}
+.title-white {
+  font-weight: 500;
+  font-size: 2rem;
+  color: var(--color-text-neutral-light);
+  border-bottom: 1px solid var(--color-text-neutral-light);
 }
 </style>

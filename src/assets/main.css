@@ -18,7 +18,7 @@ body::-webkit-scrollbar
 }
 
 body::-webkit-scrollbar-thumb {
-	background-color: var(--color-text-neutral-light);
+	background-color: var(--color-primary-light);
   border-radius: 8px;
 }
 

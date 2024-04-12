@@ -12,7 +12,13 @@ const router = new VueRouter({
       name: 'home',
       component: () => import('../views/Home.vue')
     },
+    {
+      path: '*',
+      component: () => import('../views/NotFoundPage.vue') 
+    },
   ]
 });
+
+
 
 export default router;
