@@ -60,7 +60,7 @@ export default {
             position: this.$t('workExperiences.exatiAnalytics.position'),
             description: this.$t('workExperiences.exatiAnalytics.description'),
             tecnologies: this.$t('workExperiences.exatiAnalytics.tecnologies'),
-            logoSrc: 'src/assets/logos/exati-logo.webp'
+            logoSrc: '../../assets/logos/exati-logo.webp'
           },
           {
             company: this.$t('workExperiences.exatiIntern.company'),
