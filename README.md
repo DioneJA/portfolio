@@ -33,7 +33,7 @@ npm install
 npm run serve
 ```
 
-## Abra o navegador e vá para http://localhost:8080 para visualizar o portfólio.
+### Abra o navegador e vá para http://localhost:8080 para visualizar o portfólio.
 
 ## Contribuindo
 
