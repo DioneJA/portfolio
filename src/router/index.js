@@ -14,12 +14,12 @@ const router = new VueRouter({
       component: () => import('../views/Home.vue')
     },
     {
-      path: '/*',
-      name: 'notFound',
+      path: '/:pathMatch(.*)*',
+      name: 'NotFound',
       component: () => import(
         /*webpackChunkName: "NotFound" */
-        '../views/NotFoundPage.vue') 
-    },
+        '../views/NotFoundPage.vue')
+      },
   ],
   beforeEnter: function (to, from, next) {
     const exists = store.destinations.find(destination => destination.slug === to.params.slug);
