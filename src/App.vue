@@ -60,10 +60,6 @@ export default {
     };
   },
   mounted: function () {
-    if (this.$router.name !== 'home') {
-      this.$router.push({ name: 'notFound' });
-      return;
-    }
     this.loadComponent();
     window.addEventListener('scroll', this.handleScroll);
   },

@@ -9,12 +9,12 @@ const router = new VueRouter({
   base: import.meta.env.BASE_URL,
   routes: [
     {
-      path: '/',
+      path: '',
       name: 'home',
       component: () => import('../views/Home.vue')
     },
     {
-      path: '*',
+      path: '/*',
       name: 'notFound',
       component: () => import(
         /*webpackChunkName: "NotFound" */
