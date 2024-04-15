@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import store from '@/store';
+import NotFoundPage from '../views/NotFoundPage.vue';
 
 Vue.use(VueRouter);
 
@@ -16,10 +17,9 @@ const router = new VueRouter({
     {
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
-      component: () => import(
-        /*webpackChunkName: "NotFound" */
-        '../views/NotFoundPage.vue')
-      },
+      status: 404,
+      component: NotFoundPage,
+    },
   ],
   beforeEnter: function (to, from, next) {
     const exists = store.destinations.find(destination => destination.slug === to.params.slug);
