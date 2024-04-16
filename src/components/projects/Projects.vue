@@ -32,13 +32,6 @@
 
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
-import portfolioImg from '../../assets/projects/portfolio-img.webp';
-import toDoListImg from '../../assets/projects/to-do-list.webp';
-import monsterKillerImg from '../../assets/projects/monster-killer.webp';
-import baseVueProjectImg from '../../assets/projects/base-project-vue.webp';
-import javaCompilerImg from '../../assets/projects/java-compiler.webp';
-import afndConversor from '../../assets/projects/afnd-conversor.webp';
-import netflixCloneImg from '../../assets/projects/netflix-clone.webp';
 
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
@@ -56,6 +49,17 @@ export default {
       default: false
     },
   },
+  data: function () {
+    return {
+       portfolioImg: '../../projects/portfolio-img.webp',
+       toDoListImg: '../../projects/to-do-list.webp',
+       monsterKillerImg: '../../projects/monster-killer.webp',
+       baseVueProjectImg: '../../projects/base-project-vue.webp',
+       javaCompilerImg: '../../projects/java-compiler.webp',
+       afndConversor: '../../projects/afnd-conversor.webp',
+       netflixCloneImg: '../../projects/netflix-clone.webp',
+    };
+  },
   computed: {
     isMediumScreen() {
       return window.innerWidth < TabletScreenWidth;
@@ -65,43 +69,43 @@ export default {
         {
           title: this.$t('projects.portfolio.title'),
           description: this.$t('projects.portfolio.description'),
-          imagePath: portfolioImg,
+          imagePath: this.portfolioImg,
           projectUrl: 'https://github.com/DioneJA/portfolio',
         },
         {
           title: this.$t('projects.toDoList.title'),
           description: this.$t('projects.toDoList.description'),
-          imagePath: toDoListImg,
+          imagePath: this.toDoListImg,
           projectUrl: 'https://github.com/DioneJA/toDo-list-vuejs',
         },
         {
           title: this.$t('projects.monsterKiller.title'),
           description: this.$t('projects.monsterKiller.description'),
-          imagePath: monsterKillerImg,
+          imagePath: this.monsterKillerImg,
           projectUrl: 'https://github.com/DioneJA/matador-de-monstros',
         },
         {
           title: this.$t('projects.baseVueProject.title'),
           description: this.$t('projects.baseVueProject.description'),
-          imagePath: baseVueProjectImg,
+          imagePath: this.baseVueProjectImg,
           projectUrl: 'https://github.com/DioneJA/base-vue-project',
         },
         {
           title: this.$t('projects.javaCompilator.title'),
           description: this.$t('projects.javaCompilator.description'),
-          imagePath: javaCompilerImg,
+          imagePath: this.javaCompilerImg,
           projectUrl: 'https://github.com/PedroH-CElias/Compilador',
         },
         {
           title: this.$t('projects.netflixClone.title'),
           description: this.$t('projects.netflixClone.description'),
-          imagePath: netflixCloneImg,
+          imagePath: this.netflixCloneImg,
           projectUrl: 'https://github.com/DioneJA/clone_front_netflix',
         },
         {
           title: this.$t('projects.afndConversor.title'),
           description: this.$t('projects.afndConversor.description'),
-          imagePath: afndConversor,
+          imagePath: this.afndConversor,
           projectUrl: 'https://github.com/DioneJA/Conversor-de-AFND-para-AFD',
         },
       ];

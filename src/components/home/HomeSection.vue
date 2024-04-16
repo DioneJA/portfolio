@@ -2,12 +2,7 @@
   <div class="flex items-center justify-center">
     <div class="background-image absolute w-screen h-screen z-0" />
     <div class="flex flex-col text-center items-center justify-center z-10">
-      <image-preload
-        :src="imageSrc"
-        @image-preloaded="isLoadedImage"
-      />
       <img
-        v-if="loadedImage"
         :src="imageSrc"
         alt="Imagem"
         class="profile-image"
@@ -28,18 +23,13 @@
         </button>
       </div>
     </div>
-    <div></div>
   </div>
 </template>
 
 <script>
-import ImagePreload from '../preloadImage/PreLoadImage.vue';
 
 export default {
   name: 'HomeSection',
-  components: {
-    ImagePreload: ImagePreload,
-  },
   props: {
     isMobile: {
       type: Boolean,
@@ -57,17 +47,13 @@ export default {
       const link = `https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}?link=${this.$t("sayHello")}`;
       window.open(link, "_blank");
     },
-    isLoadedImage: function () {
-      this.$emit('image-loaded');
-      this.loadedImage = true;
-    }
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .background-image {
-  background-image: url("../../assets/background/image-background.webp");
+  background-image: url("../../background/image-background.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.25;

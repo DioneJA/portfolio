@@ -5,8 +5,15 @@
     ref="scrollableElement"
     :class="isMenuOpen ? 'overflow-hidden' : ''"
   >
+    <preload-image
+      v-for="image in criticalImages"
+      :key="image.src"
+      :src="image.src"
+      @image-preloaded="imagePreloaded(image)"
+    />
     <header>
       <navbar
+        v-if="criticalImagesLoaded"
         class="w-full"
         :is-menu-open="isMenuOpen"
         :is-scroll-at-start="isScrollAtStart"
@@ -17,23 +24,23 @@
 
     <Transition name="slide">
       <mobile-menu
-        v-if="isMenuOpen"
+        v-if="isMenuOpen && criticalImagesLoaded"
         @change-view="changeView"
       />
     </Transition>
 
-    <div>
+    <div  v-if="criticalImagesLoaded">
       <section>
         <router-view />
         <footer-component/>
       </section>
     </div>
 
-    <language-selector/>
+    <language-selector v-if="criticalImagesLoaded"/>
 
     <Transition name="fade">
       <go-to-top-btn
-        v-if="!isMenuOpen && !isScrollAtStart"
+        v-if="!isMenuOpen && !isScrollAtStart && criticalImagesLoaded"
         @go-to-top="scrollToTop"
       />
     </Transition> 
@@ -43,6 +50,8 @@
 <script>
 import { Locales } from './i18n/locales';
 import { MobileScreenWidth } from './utils/screen/screenUtils';
+import PreloadImage from './components/preloadImage/PreloadImage.vue';
+import { CriticalImages } from './utils/criticalImages/criticalImagesUtils.js';
 
 export default {
   name: 'App',
@@ -52,11 +61,13 @@ export default {
     LanguageSelector: () => import('./components/language/LanguageSelector.vue'),
     GoToTopBtn: () => import('./components/buttons/GoToTopBtn.vue'),
     FooterComponent: () => import('./components/footer/FooterComponent.vue'),
+    PreloadImage: PreloadImage,
   },
   data: function () {
     return {
       isMenuOpen: false,
       isScrollAtTop: true,
+      criticalImages: CriticalImages,
     };
   },
   mounted: function () {
@@ -73,10 +84,16 @@ export default {
     isScrollAtStart() {
       return this.isScrollAtTop;
     },
+    criticalImagesLoaded: function () {
+      return this.criticalImages.every(image => image.loaded);
+    },
   },
   methods: {
     loadComponent: function () {
       this.setDefaultLanguage();
+    },
+    imagePreloaded: function (image) {
+      image.loaded = true;
     },
     changeView: async function (view) {
       if (this.$route?.name !== 'home') {

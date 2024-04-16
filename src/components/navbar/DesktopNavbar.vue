@@ -53,8 +53,6 @@
 <script>
 import { TabletScreenWidth } from '../../utils/screen/screenUtils';
 import { ViewsType } from '../../utils/view/viewUtils';
-import smallLogo from '../../assets/logos/small-image-logo.png';
-import normalLogo from '../../assets/logos/image-logo.png';
 
 export default {
   name: 'DesktopNavBar',
@@ -70,8 +68,8 @@ export default {
   data: function () {
     return {
       ViewsType: ViewsType,
-      smallLogo: smallLogo,
-      normalLogo: normalLogo
+      smallLogo: '../../logos/small-image-logo.png',
+      normalLogo: '../../logos/image-logo.png',
     };
   },
   computed: {
