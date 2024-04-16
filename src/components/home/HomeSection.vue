@@ -6,6 +6,7 @@
         style="object-fit: cover; width: 100%; height: 100%;"
         alt="Imagem"
         class="background-image"
+        loading="lazy"
       />
     </div>
     <div class="flex flex-col text-center items-center justify-center z-10">
@@ -13,6 +14,7 @@
         :src="imageSrc"
         alt="Imagem"
         class="profile-image"
+        loading="lazy"
       />
 
       <div class="mt-7">
@@ -47,7 +49,6 @@ export default {
     return {
       imageSrc: 'profile/image-profile.webp',
       backgroundImage: 'background/image-background.webp',
-      loadedImage: false,
     };
   },
   methods: {
