@@ -10,22 +10,22 @@
         <img
           src="../../assets/logos/image-logo.png"
           alt="logo"
-          style="max-width: 100%; max-height: 100%; object-fit: contain"
+          style="width: 100%; height: 100%; object-fit: contain"
           class="cursor-pointer"
           @click="$emit('change-view', ViewsType.Home)"
         />
       </div>
 
       <div>
-        <a
-          class="navbar-btn text-md font-medium tracking-wide px-7 text-2xl"
+        <button
+          class="navbar-btn text-md font-medium tracking-wide text-2xl"
           :class="!isScrollAtStart || isMenuOpen ? 'text-light' : 'text-dark'"
           @click="$emit('toggle-menu')">
           <Transition mode="out-in">
             <mdicon v-if="isMenuOpen" name="close" :width="30" :height="30" />
             <mdicon v-else name="menu" :width="30" :height="30" />
           </Transition>
-        </a>
+        </button>
       </div>
     </div>
   </div>

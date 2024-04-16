@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import 'devicon';
+
 export default {
   name: 'SkillsCard',
   props: {

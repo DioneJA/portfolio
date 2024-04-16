@@ -11,7 +11,7 @@
       <img
         :src="isMediumScreen ? smallLogo : normalLogo"
         alt="logo"
-        style="max-width: 100%; max-height: 100%; object-fit: contain;"
+        style="width: 100%; height: 100%; object-fit: contain;"
         class="cursor-pointer img-logo"
         @click="changeView(ViewsType.Home)"
       />

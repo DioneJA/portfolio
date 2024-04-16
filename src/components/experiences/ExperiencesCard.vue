@@ -6,7 +6,7 @@
           class="w-20 h-20"
           :src="companyLogo"
           alt="experience-icon"
-          style="max-width: 100%; max-height: 100%; object-fit: contain;"
+          style="width: 75px; height: 75px; object-fit: contain;"
         />
       </div>
     <h1

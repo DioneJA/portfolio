@@ -63,7 +63,7 @@
         src="../../assets/profile/full-image-profile.webp"
         alt="image"
         style="object-fit: cover"
-        :style="isMobile ? 'max-width: 95%; ' : 'max-width: 75%; '"
+        :style="isMobile ? 'width: 95%; ' : 'width: 75%; '"
         class="image"
       />
     </div>
