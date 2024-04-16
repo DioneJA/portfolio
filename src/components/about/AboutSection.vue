@@ -63,7 +63,7 @@
         :src="imageSrc"
         alt="image"
         style="object-fit: cover"
-        :style="isMobile ? 'width: 95%; height: 95%;' : 'width: 75%; height: 75%;'"
+        :style="isMobile ? 'width: 95%;' : 'width: 75%;'"
         class="image"
       />
     </div>

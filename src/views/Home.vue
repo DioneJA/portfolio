@@ -10,25 +10,25 @@
       :id="ViewsType.AboutMe"
       :ref="ViewsType.AboutMe"
       :is-mobile="isMobile"
-      class="w-full section"
+      class="w-full section z-10"
     />
     <experiences-section
       :id="ViewsType.Experiences"
       :ref="ViewsType.Experiences"
       :is-mobile="isMobile"
-      class="w-full section"
+      class="w-full section z-10"
     />
     <projects
       :id="ViewsType.Projects"
       :ref="ViewsType.Projects"
       :is-mobile="isMobile"
-      class="w-full section"
+      class="w-full section z-10"
     />
     <skills
       :id="ViewsType.Skills"
       :ref="ViewsType.Skills"
       :is-mobile="isMobile"
-      class="w-full section"
+      class="w-full section z-10"
     />
   </div>
 </template>

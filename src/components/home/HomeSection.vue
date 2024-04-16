@@ -1,6 +1,13 @@
 <template>
   <div class="flex items-center justify-center">
-    <div class="background-image absolute w-screen h-screen z-0" />
+    <div class="absolute w-screen h-screen z-0">
+      <img
+        :src="backgroundImage"
+        style="object-fit: cover; width: 100%; height: 100%;"
+        alt="Imagem"
+        class="background-image"
+      />
+    </div>
     <div class="flex flex-col text-center items-center justify-center z-10">
       <img
         :src="imageSrc"
@@ -39,6 +46,7 @@ export default {
   data: function () {
     return {
       imageSrc: 'profile/image-profile.webp',
+      backgroundImage: 'background/image-background.webp',
       loadedImage: false,
     };
   },
@@ -53,9 +61,6 @@ export default {
 
 <style lang="scss" scoped>
 .background-image {
-  background-image: url("background/image-background.webp");
-  background-size: cover;
-  background-position: center;
   opacity: 0.25;
   filter: grayscale(100%);
   filter: blur(1px);
