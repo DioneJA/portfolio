@@ -1,62 +1,62 @@
 const CriticalImages = [
   {
-    src: './projects/afnd-conversor.webp',
+    src: 'projects/afnd-conversor.webp',
     loaded: false,
   },
   {
-    src: './projects/base-project-vue.webp',
+    src: 'projects/base-project-vue.webp',
     loaded: false,
   },
   {
-    src: './projects/java-compiler.webp',
+    src: 'projects/java-compiler.webp',
     loaded: false,
   },
   {
-    src: './projects/monster-killer.webp',
+    src: 'projects/monster-killer.webp',
     loaded: false,
   },
   {
-    src: './projects/netflix-clone.webp',
+    src: 'projects/netflix-clone.webp',
     loaded: false,
   },
   {
-    src: './projects/to-do-list.webp',
+    src: 'projects/to-do-list.webp',
     loaded: false,
   },
   {
-    src: './projects/portfolio-img.webp',
+    src: 'projects/portfolio-img.webp',
     loaded: false,
   },
   {
-    src: './logos/exati-logo.webp',
+    src: 'logos/exati-logo.webp',
     loaded: false,
   },
   {
-    src: './logos/ifsul-logo.webp',
+    src: 'logos/ifsul-logo.webp',
     loaded: false,
   },
   {
-    src: './logos/image-logo.png',
+    src: 'logos/image-logo.png',
     loaded: false,
   },
   {
-    src: './logos/prefeitura-passos-logo.webp',
+    src: 'logos/prefeitura-passos-logo.webp',
     loaded: false,
   },
   {
-    src: './logos/small-image-logo.png',
+    src: 'logos/small-image-logo.png',
     loaded: false,
   },
   {
-    src: './background/image-background.webp',
+    src: 'background/image-background.webp',
     loaded: false,
   },
   {
-    src: './profile/full-image-profile.webp',
+    src: 'profile/full-image-profile.webp',
     loaded: false,
   },
   {
-    src: './profile/image-profile.webp',
+    src: 'profile/image-profile.webp',
     loaded: false,
   },
 ];

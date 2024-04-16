@@ -38,7 +38,7 @@ export default {
   },
   data: function () {
     return {
-      imageSrc: '../../profile/image-profile.webp',
+      imageSrc: 'profile/image-profile.webp',
       loadedImage: false,
     };
   },
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss" scoped>
 .background-image {
-  background-image: url("../../background/image-background.webp");
+  background-image: url("background/image-background.webp");
   background-size: cover;
   background-position: center;
   opacity: 0.25;

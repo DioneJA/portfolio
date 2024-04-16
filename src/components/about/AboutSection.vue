@@ -81,7 +81,7 @@ export default {
   },
   data: function () {
     return {
-      imageSrc: '../../profile/full-image-profile.webp',
+      imageSrc: 'profile/full-image-profile.webp',
     };
   },
   methods: {

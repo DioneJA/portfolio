@@ -68,8 +68,8 @@ export default {
   data: function () {
     return {
       ViewsType: ViewsType,
-      smallLogo: '../../logos/small-image-logo.png',
-      normalLogo: '../../logos/image-logo.png',
+      smallLogo: 'logos/small-image-logo.png',
+      normalLogo: 'logos/image-logo.png',
     };
   },
   computed: {

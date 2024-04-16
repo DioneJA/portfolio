@@ -51,13 +51,13 @@ export default {
   },
   data: function () {
     return {
-       portfolioImg: '../../projects/portfolio-img.webp',
-       toDoListImg: '../../projects/to-do-list.webp',
-       monsterKillerImg: '../../projects/monster-killer.webp',
-       baseVueProjectImg: '../../projects/base-project-vue.webp',
-       javaCompilerImg: '../../projects/java-compiler.webp',
-       afndConversor: '../../projects/afnd-conversor.webp',
-       netflixCloneImg: '../../projects/netflix-clone.webp',
+       portfolioImg: 'projects/portfolio-img.webp',
+       toDoListImg: 'projects/to-do-list.webp',
+       monsterKillerImg: 'projects/monster-killer.webp',
+       baseVueProjectImg: 'projects/base-project-vue.webp',
+       javaCompilerImg: 'projects/java-compiler.webp',
+       afndConversor: 'projects/afnd-conversor.webp',
+       netflixCloneImg: 'projects/netflix-clone.webp',
     };
   },
   computed: {

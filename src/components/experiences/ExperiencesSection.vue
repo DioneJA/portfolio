@@ -46,9 +46,9 @@ export default {
   },
   data: function () {
     return {
-      exatiLogo: '../../logos/exati-logo.webp',
-      ifsulLogo: '../../logos/ifsul-logo.webp',
-      prefeituraPassosLogo: '../../logos/prefeitura-passos-logo.webp',
+      exatiLogo: 'logos/exati-logo.webp',
+      ifsulLogo: 'logos/ifsul-logo.webp',
+      prefeituraPassosLogo: 'logos/prefeitura-passos-logo.webp',
     };
   },
   computed: {
