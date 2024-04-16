@@ -1,4 +1,3 @@
-/* color palette from <https://github.com/vuejs/theme> */
 :root {
   --color-primary: #E0234E;
   --color-primary-light: rgb(255, 122, 122);
@@ -17,15 +16,4 @@
   --color-background-tertiary-light: #f9f9f9;
   --color-background-tertiary-light-transparent:rgba(249, 249, 249, 0.755);
   --color-background-tertiary-dark: #d0d0d0;
-}
-
-/* semantic color variables for this project */
-:root {
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-border-primary: #cccccc;
-    --color-border-secondary: #d5d6d7;
-  }
 }

@@ -2,7 +2,17 @@
   <div class="flex items-center justify-center">
     <div class="background-image absolute w-screen h-screen z-0" />
     <div class="flex flex-col text-center items-center justify-center z-10">
-      <div class="profile-image"></div>
+      <image-preload
+        :src="imageSrc"
+        @image-preloaded="isLoadedImage"
+      />
+      <img
+        v-if="loadedImage"
+        :src="imageSrc"
+        alt="Imagem"
+        class="profile-image"
+      />
+
       <div class="mt-7">
         <span class="complete-name">{{ $t("myCompleteName").toUpperCase() }}</span>
       </div>
@@ -23,20 +33,34 @@
 </template>
 
 <script>
+import ImagePreload from '../preloadImage/PreLoadImage.vue';
 
 export default {
   name: 'HomeSection',
+  components: {
+    ImagePreload: ImagePreload,
+  },
   props: {
     isMobile: {
       type: Boolean,
       default: false
     },
   },
+  data: function () {
+    return {
+      imageSrc: '../../profile/image-profile.webp',
+      loadedImage: false,
+    };
+  },
   methods: {
     sendMessage: function () {
       const link = `https://wa.me/${import.meta.env.VITE_PHONE_NUMBER}?link=${this.$t("sayHello")}`;
       window.open(link, "_blank");
     },
+    isLoadedImage: function () {
+      this.$emit('image-loaded');
+      this.loadedImage = true;
+    }
   },
 };
 </script>
@@ -54,9 +78,6 @@ export default {
 .profile-image {
   width: 250px;
   height: 250px;
-  background-image: url("../../assets/profile/image-profile.webp");
-  background-size: cover;
-  background-position: center;
   border-radius: 50%;
   opacity: 1;
   -moz-box-shadow: 0px 5px 5px grey;

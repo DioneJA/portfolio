@@ -5,26 +5,31 @@
       :ref="ViewsType.Home"
       :is-mobile="isMobile"
       class="w-full first-section"
+      @image-loaded="imageLoaded = true"
     />
     <about-section
+      v-if="imageLoaded"
       :id="ViewsType.AboutMe"
       :ref="ViewsType.AboutMe"
       :is-mobile="isMobile"
       class="w-full section"
     />
     <experiences-section
+      v-if="imageLoaded"
       :id="ViewsType.Experiences"
       :ref="ViewsType.Experiences"
       :is-mobile="isMobile"
       class="w-full section"
     />
     <projects
+      v-if="imageLoaded"
       :id="ViewsType.Projects"
       :ref="ViewsType.Projects"
       :is-mobile="isMobile"
       class="w-full section"
     />
     <skills
+      v-if="imageLoaded"
       :id="ViewsType.Skills"
       :ref="ViewsType.Skills"
       :is-mobile="isMobile"
@@ -51,6 +56,7 @@ export default {
   data: function () {
     return {
       ViewsType: ViewsType,
+      imageLoaded: false,
     };
   },
   computed: {

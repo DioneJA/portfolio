@@ -60,10 +60,10 @@
     </div>
     <div class="flex items-center justify-center profile-image-container basis-1/2">
       <img
-        src="../../assets/profile/full-image-profile.webp"
+        :src="imageSrc"
         alt="image"
         style="object-fit: cover"
-        :style="isMobile ? 'width: 95%; ' : 'width: 75%; '"
+        :style="isMobile ? 'width: 95%; height: 95%;' : 'width: 75%; height: 75%;'"
         class="image"
       />
     </div>
@@ -78,6 +78,11 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+  data: function () {
+    return {
+      imageSrc: '../../profile/full-image-profile.webp',
+    };
   },
   methods: {
     goToUrl: function (url) {
