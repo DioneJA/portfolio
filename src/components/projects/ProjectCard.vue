@@ -17,8 +17,12 @@
     >
       <h1 class="card-title text-center">{{ projectTitle.toUpperCase() }}</h1>
       <span class="normal-text text-center">{{ projectDescription }}</span>
-      <button class="flex items-center justify-center cursor-pointer button mt-5">
-        <a :href="projectUrl" target="_blank">
+      <button
+        id="github"
+        aria-label="Project Link"
+        class="flex items-center justify-center cursor-pointer button mt-5"
+      >
+        <a :aria-label="`Project Link ${projectTitle}`" :href="projectUrl" target="_blank">
           <mdicon
             name="open-in-new"
             size="25"

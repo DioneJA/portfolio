@@ -1,5 +1,7 @@
 <template>
   <button
+    id="desktop-navbar-btn"
+    aria-label="Desktop Navbar Button"
     class="navbar-button font-medium text-md tracking-wider px-7"
     :class="{
       'scroll-in-top': scrollAtStart,

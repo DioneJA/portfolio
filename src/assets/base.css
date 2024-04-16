@@ -10,8 +10,8 @@
   --color-text-neutral-light: #FFFFFF;
   --color-border-primary: #b4b4b4;
   --color-border-secondary: #d5d6d7;
-  --color-background-primary: #191919;
-  --color-background-secondary: #323232;
+  --color-background-primary: #131313;
+  --color-background-secondary: rgb(36, 36, 36);
   --color-background-secondary-transparent: #59595930;
   --color-background-tertiary: #f0f0f0;
   --color-background-tertiary-light: #f9f9f9;

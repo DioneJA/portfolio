@@ -1,5 +1,7 @@
 <template>
   <button
+    aria-label="Navbar button"
+    id="mobile-navbar-btn"
     class="navbar-button text-lg font-medium tracking-wide"
     @click="$emit('click')"
     >

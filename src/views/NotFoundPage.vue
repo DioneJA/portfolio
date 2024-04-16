@@ -11,7 +11,7 @@
         
         <p>{{ $t('notFoundPage.description') }}</p>
         
-        <a href="/" class="link_404">{{ $t('notFoundPage.button') }}</a>
+        <a aria-label="Home" href="/" class="link_404">{{ $t('notFoundPage.button') }}</a>
       </div>
     </div>
   </section>

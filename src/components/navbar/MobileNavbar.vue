@@ -18,6 +18,8 @@
 
       <div>
         <button
+          id="mobile-navbar-btn"
+          aria-label="Mobile Navbar Button"
           class="navbar-btn text-md font-medium tracking-wide text-2xl"
           :class="!isScrollAtStart || isMenuOpen ? 'text-light' : 'text-dark'"
           @click="$emit('toggle-menu')">

@@ -24,7 +24,7 @@
         class="flex flex-row w-full gap-7 mt-20"
         :class="isMobile ? 'justify-center' : 'justify-start'"
       >
-        <button @click="openLinkedinUrl()">
+        <button id="linkedin" @click="openLinkedinUrl()" aria-label="Linkedin">
           <mdicon
             class="social-media"
             name="linkedin"
@@ -32,7 +32,7 @@
           >
           </mdicon>
         </button>
-        <button @click="openInstagramUrl()">
+        <button id="instagram" @click="openInstagramUrl()" aria-label="Instagram">
           <mdicon
             class="social-media"
             name="instagram"
@@ -40,7 +40,7 @@
           >
           </mdicon>
         </button>
-        <button @click="openFacebookUrl()">
+        <button id="facebook" @click="openFacebookUrl()" aria-label="Facebook">
           <mdicon
             class="social-media"
             name="facebook"
@@ -48,7 +48,7 @@
           >
           </mdicon>
         </button>
-        <button @click="openGithubUrl()">
+        <button id="github" @click="openGithubUrl()" aria-label="Github">
           <mdicon
             class="social-media"
             name="github"

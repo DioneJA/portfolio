@@ -12,7 +12,7 @@
         <span class="normal-text ml-1 font-medium">{{ $t("role") }}</span>
       </div>
       <div class="mt-7">
-        <button class="contact-me flex gap-3" @click="sendMessage">
+        <button id="send-message" aria-label="Send Message" class="contact-me flex gap-3" @click="sendMessage">
           <mdicon name="whatsapp" />
           {{ $t("contactMe") }}
         </button>

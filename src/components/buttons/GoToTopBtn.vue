@@ -1,6 +1,8 @@
 <template>
   <button
+    id="go-to-top-btn"
     class="go-to-top-btn"
+    aria-label="Go to top"
     @click="$emit('go-to-top')"
   >
     <mdicon name="chevron-up" size="30"/>
