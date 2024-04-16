@@ -8,7 +8,7 @@
       }">
       <div class="flex items-center justify-between" style="height: 45px">
         <img
-          src="logos/image-logo.png"
+          :src="logoUrl"
           alt="logo"
           style="width: 100%; height: 100%; object-fit: contain"
           class="cursor-pointer"
@@ -51,6 +51,7 @@ export default {
   data: function () {
     return {
       ViewsType: ViewsType,
+      logoUrl: 'logos/image-logo.png',
     };
   },
 };
