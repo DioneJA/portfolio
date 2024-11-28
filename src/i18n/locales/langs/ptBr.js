@@ -62,6 +62,10 @@ const messages = {
     portfolio: {
       title: 'Meu Portifolio',
       description: 'Projeto para o aprendizado de JavaScript, HTML, CSS, Vue.js, Tailwind CSS e Vite.',
+    },
+    aStar: {
+      title: 'A Estrela',
+      description: 'Projeto utilizando VueJs para criar um exemplo prático do algoritmo A* (cálculo de caminho).',
     }
   },
   notFoundPage: {

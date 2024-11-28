@@ -60,6 +60,10 @@ const messages = {
       title: 'My Portfolio',
       description: 'Project for learning JavaScript, HTML, CSS, VUE.JS, Tailwind CSS and VITE',
     },
+    aStar: {
+      title: 'A Star',
+      description: 'Project using VueJs to create an example practical of the A* (path calculation) algorithm.',
+    }
   },
   notFoundPage: {
     title: 'Page Not Found',

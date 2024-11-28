@@ -56,6 +56,7 @@ export default {
        monsterKillerImg: 'projects/monster-killer.webp',
        baseVueProjectImg: 'projects/base-project-vue.webp',
        javaCompilerImg: 'projects/java-compiler.webp',
+       aStar: 'projects/a-star.webp',
        afndConversor: 'projects/afnd-conversor.webp',
        netflixCloneImg: 'projects/netflix-clone.webp',
     };
@@ -66,6 +67,12 @@ export default {
     },
     projects: function () {
       return [
+        {
+          title: this.$t('projects.aStar.title'),
+          description: this.$t('projects.aStar.description'),
+          imagePath: this.aStar,
+          projectUrl: 'https://github.com/DioneJA/a-star',
+        },
         {
           title: this.$t('projects.portfolio.title'),
           description: this.$t('projects.portfolio.description'),
